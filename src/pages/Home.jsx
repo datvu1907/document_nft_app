@@ -12,8 +12,6 @@ import FadeLoader from "react-spinners/BounceLoader";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ethers } from "ethers";
-import dotenv from "dotenv";
-dotenv.config();
 const Home = () => {
   const [loading, setLoading] = useState(false);
   const [selectedFile, setSelectedFile] = useState();
@@ -42,11 +40,11 @@ const Home = () => {
 
         const resFile = await axios({
           method: "post",
-          url: process.env.URL,
+          url: process.env.REACT_APP_URL,
           data: formData,
           headers: {
-            pinata_api_key: process.env.API_KEY,
-            pinata_secret_api_key: process.env.API_SECRET_KEY,
+            pinata_api_key: process.env.REACT_APP_API_KEY,
+            pinata_secret_api_key: process.env.REACT_APP_API_SECRET_KEY,
             "Content-Type": "multipart/form-data",
           },
         });
