@@ -22,7 +22,7 @@ const Home = () => {
   const connectWithMetamask = useMetamask();
   const address = useAddress();
   const { contract } = useContract(
-    "0x5e2BAC00242aFA41f065C8C6F0Fb64Fb432f4008"
+    "0x5D9ab428c9C31740488C6268352393e085b2B0a9"
   );
   const { mutateAsync: mintNft, isLoading, error } = useMintNFT(contract);
   const { mutateAsync: transferNFT } = useTransferNFT(contract);
